@@ -1,6 +1,6 @@
 import React from 'react';
 import { ListGroup, Alert } from 'react-bootstrap';
-import { Document } from './document.js';
+import { Document } from './book.js';
 
 export const DocumentsList = ({ documents }) => (
   documents.length > 0 ? <ListGroup className="documents-list">
