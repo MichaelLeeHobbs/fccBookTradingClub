@@ -1,16 +1,16 @@
 import React from 'react';
 import { ListGroup, Alert } from 'react-bootstrap';
-import { Document } from './book.js';
+import { Book } from './book.js';
 
-export const DocumentsList = ({ documents }) => (
-  documents.length > 0 ? <ListGroup className="documents-list">
-    {documents.map((doc) => (
-      <Document key={ doc._id } document={ doc } />
+export const BooksList = ({ books }) => (
+  (books && books.length > 0) ? <ListGroup className="books-list">
+    {books.map((doc) => (
+      <Book key={ doc._id } book={ doc } />
     ))}
   </ListGroup> :
-  <Alert bsStyle="warning">No documents yet.</Alert>
+  <Alert bsStyle="warning">No books found.</Alert>
 );
 
-DocumentsList.propTypes = {
-  documents: React.PropTypes.array,
+BooksList.propTypes = {
+  books: React.PropTypes.array,
 };
