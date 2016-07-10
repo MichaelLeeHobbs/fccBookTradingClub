@@ -1,4 +1,5 @@
 import { Meteor } from 'meteor/meteor';
-import { Documents } from '../documents';
+import { Books } from '../books';
 
-Meteor.publish('documents', () => Documents.find());
+Meteor.publish('books', () => Books.find());
+
